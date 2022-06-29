@@ -14,18 +14,31 @@
   </py-env>
   <style>
 
-    #editor {
+    #app {
       display: flex;
       flex-direction: column;
       width: 60%;
+      height: 100%;
       margin-left: auto;
       margin-right: auto;
+    }
+
+    #app h1 {
+      padding: 15px;
+      font-size: x-large;
+      background-color: #c4d2ff;
+    }
+
+    #app .enunciado {
+      padding: 15px;
+      line-height: 2;
     }
 
     #code {
       height: 10rem;
       border: 1px solid;
       border-radius: 3px;
+      flex: 1;
     }
 
     #run-tests {
@@ -35,18 +48,24 @@
       margin-top: 10px;
       margin-bottom: 10px;
     }
+
+    #pytest-output {
+      flex: 1;
+      overflow: scroll;
+    }
     
   </style>
 </head>
 
 <body>
-  <h1>Área do Círculo</h1>
+  <section id="app"">
+    <h1> Exercício: Área do Círculo</h1>
+    <div class="enunciado">
+      <p>Faça uma função que recebe o raio de um círculo e devolve a sua área.</p>
 
-  <p>Faça uma função que recebe o raio de um círculo e devolve a sua área.</p>
+      <p>O nome da sua função deve ser <code>calcula_area_do_circulo.</code></p>
+    </div>
 
-  <p>O nome da sua função deve ser <code>calcula_area_do_circulo.</code></p>
-
-  <section id="editor">
     <textarea id="code" autocomplete="off">
 
     </textarea>
@@ -56,9 +75,8 @@
     <pre id="pytest-output">
   
     </pre>
-  </section>
-  
 
+  </section>
 
   <py-script src="main.py" ouput="pytest-output">
   </py-script>
