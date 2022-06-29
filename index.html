@@ -1,0 +1,68 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+  <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+  <py-env>
+    - pytest
+    - pytest-reportlog
+    - paths:
+      - ./main.py
+      - ./solution.py
+      - ./test_sol.py
+  </py-env>
+  <style>
+
+    #editor {
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #code {
+      height: 10rem;
+      border: 1px solid;
+      border-radius: 3px;
+    }
+
+    #run-tests {
+      background-color: #b5ddad;
+      width: 10rem;
+      align-self: end;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <h1>Área do Círculo</h1>
+
+  <p>Faça uma função que recebe o raio de um círculo e devolve a sua área.</p>
+
+  <p>O nome da sua função deve ser <code>calcula_area_do_circulo.</code></p>
+
+  <section id="editor">
+    <textarea id="code" autocomplete="off">
+
+    </textarea>
+  
+    <button id="run-tests">Run Tests</button>
+  
+    <pre id="pytest-output">
+  
+    </pre>
+  </section>
+  
+
+
+  <py-script src="main.py" ouput="pytest-output">
+  </py-script>
+
+</body>
+
+</html>
