@@ -6,13 +6,13 @@ import importlib
 import sys
 
 def run_turtle(e):
-    print('sdlkj')
     code = document.getElementById('code')
 
     with open('tt.py', 'w') as f:
         f.write(code.value)
 
     turtle.reset()
+    turtle.resetscreen()
 
     if not 'tt' in sys.modules.keys():
         import tt
