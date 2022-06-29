@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
   <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/gh/vanillawc/wc-monaco-editor@1/index.js"></script>
+  
   <py-env>
     - pytest
     - pytest-reportlog
@@ -66,9 +68,7 @@
       <p>O nome da sua função deve ser <code>calcula_area_do_circulo.</code></p>
     </div>
 
-    <textarea id="code" autocomplete="off">
-
-    </textarea>
+    <wc-monaco-editor id="code" language="python"></wc-monaco-editor>
   
     <button id="run-tests">Run Tests</button>
   
